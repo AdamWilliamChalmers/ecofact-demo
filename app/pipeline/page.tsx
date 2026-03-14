@@ -11,9 +11,9 @@ import { COUNTRY_META } from "@/lib/data";
 // ---- Data ------------------------------------------------------------------
 
 const CYCLE_REPORT = {
-  run_id: "cycle-2025-03-10-0200",
-  started_at: "2025-03-10 02:00 UTC",
-  completed_at: "2025-03-10 03:47 UTC",
+  run_id: "cycle-2026-03-15-0200",
+  started_at: "2026-03-15 02:00 UTC",
+  completed_at: "2026-03-15 03:47 UTC",
   duration_mins: 107,
   status: "completed",
   new_documents: 18,
@@ -211,7 +211,7 @@ export default function PipelinePage() {
             <div className="glass-card rounded-xl overflow-hidden">
               <div className="px-5 py-3 border-b border-slate-800 flex items-center justify-between">
                 <h2 className="font-display text-sm text-white">Country Breakdown</h2>
-                <span className="text-xs text-slate-500">Cycle 2025-03-10</span>
+                <span className="text-xs text-slate-500">Cycle 2026-03-15</span>
               </div>
               <table className="w-full text-sm">
                 <thead>

@@ -29,6 +29,17 @@ function formatDate(d: string) {
   }
 }
 
+function isNewDoc(publicationDate: string): boolean {
+  if (!publicationDate) return false;
+  try {
+    const pub = new Date(publicationDate);
+    const cutoff = new Date("2024-01-01");
+    return pub >= cutoff;
+  } catch {
+    return false;
+  }
+}
+
 function ConfidenceBar({ score }: { score: number }) {
   const pct = Math.round(score * 100);
   const color = pct >= 90 ? "#4ade80" : pct >= 75 ? "#fbbf24" : "#fb7185";
@@ -128,7 +139,7 @@ function DocumentTable({ docs, selected, onSelect }: {
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-slate-800">
-            {["Title", "Country", "Type", "Status", "Relevance", "Published", "Mandatory"].map((h) => (
+            {["Title", "Country", "Type", "Status", "Relevance", "Topic", "Mandatory"].map((h) => (
               <th key={h} className="text-left py-3 px-4 text-xs text-slate-500 uppercase tracking-wider font-medium whitespace-nowrap">
                 {h}
               </th>
@@ -148,7 +159,14 @@ function DocumentTable({ docs, selected, onSelect }: {
               >
                 <td className="py-3 px-4 max-w-xs">
                   <div className="font-medium text-white leading-tight line-clamp-2 text-[13px]">{doc.title}</div>
-                  <div className="text-xs text-slate-500 mt-0.5">{doc.institution_name}</div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="text-xs text-slate-500">{doc.institution_name}</div>
+                    {isNewDoc(doc.publication_date) && (
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 tracking-wider">
+                        NEW
+                      </span>
+                    )}
+                  </div>
                 </td>
                 <td className="py-3 px-4 whitespace-nowrap">
                   <span className="flex items-center gap-1.5 text-slate-300">
@@ -167,8 +185,12 @@ function DocumentTable({ docs, selected, onSelect }: {
                 <td className="py-3 px-4 whitespace-nowrap">
                   <Badge value={doc.relevance_class} type="relevance" />
                 </td>
-                <td className="py-3 px-4 whitespace-nowrap text-xs text-slate-400">
-                  {formatDate(doc.publication_date)}
+                <td className="py-3 px-4 max-w-[140px]">
+                  {doc.thematic_tags[0] && (
+                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap block truncate">
+                      {doc.thematic_tags[0]}
+                    </span>
+                  )}
                 </td>
                 <td className="py-3 px-4 whitespace-nowrap">
                   <Badge value={doc.mandatory_or_voluntary} type="mandatory" />
@@ -365,7 +387,7 @@ export default function Home() {
     high: docs.filter((d) => d.relevance_class === "high").length,
     inForce: docs.filter((d) => d.legal_status === "in_force").length,
     pendingReview: docs.filter((d) => d.requires_human_review).length,
-    countries: [...new Set(docs.map((d) => d.country))].length,
+    countries: Array.from(new Set(docs.map((d) => d.country))).length,
   }), [docs]);
 
   const countryDocs = useMemo(() =>
@@ -493,10 +515,10 @@ export default function Home() {
 
           {/* KPI row */}
           <div className="flex-shrink-0 grid grid-cols-4 gap-4 p-5 pb-0">
-            <KpiCard label="Total Documents" value={stats.total} icon={FileText} accent="#10b981" sub="Across 3 jurisdictions" />
-            <KpiCard label="High Relevance" value={stats.high} icon={TrendingUp} accent="#34d399" sub="Laws, regulations, mandatory standards" />
+            <KpiCard label="Total Documents" value={stats.total} icon={FileText} accent="#10b981" sub="Across all jurisdictions" />
+            <KpiCard label="High-Relevance Instruments" value={stats.high} icon={TrendingUp} accent="#34d399" sub="Laws, regulations, mandatory standards" />
             <KpiCard label="Currently In Force" value={stats.inForce} icon={Shield} accent="#60a5fa" sub="Legally effective instruments" />
-            <KpiCard label="Pending QA Review" value={stats.pendingReview} icon={AlertCircle} accent="#fbbf24" sub="Confidence score < 0.75" />
+            <KpiCard label="Countries Monitored" value={stats.countries} icon={BarChart3} accent="#a78bfa" sub="UK · Germany · Brazil" />
           </div>
 
           {/* Table header */}
