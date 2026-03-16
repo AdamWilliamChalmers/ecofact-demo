@@ -354,27 +354,6 @@ export default function PipelinePage() {
                 </tbody>
               </table>
             </div>
-            <div className="glass-card rounded-xl p-5">
-              <h2 className="font-display text-sm text-white mb-3">Orchestration</h2>
-              <p className="text-sm text-slate-400 leading-relaxed">
-                The pipeline is orchestrated by <span className="text-white font-medium">Dagster</span> — providing native asset-based lineage tracking, 
-                built-in sensor/schedule primitives, and a full observability UI with Postgres-backed job history. 
-                Each job has a defined retry policy (3 retries with exponential backoff), failure notification via Slack webhook, 
-                and output checkpoint for partial re-runs.
-              </p>
-              <div className="grid grid-cols-3 gap-3 mt-4">
-                {[
-                  { label: "Orchestrator", value: "Dagster" },
-                  { label: "Notification", value: "Slack webhook" },
-                  { label: "Retry policy", value: "3× exponential" },
-                ].map(({ label, value }) => (
-                  <div key={label} className="bg-slate-800/60 rounded-lg p-3">
-                    <div className="text-xs text-slate-500 mb-1">{label}</div>
-                    <div className="text-sm font-medium text-white">{value}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         )}
 
