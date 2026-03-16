@@ -161,7 +161,7 @@ function DocumentTable({ docs, selected, onSelect }: {
                   <div className="font-medium text-white leading-tight line-clamp-2 text-[13px]">{doc.title}</div>
                   <div className="flex items-center gap-2 mt-1">
                     <div className="text-xs text-slate-500">{doc.institution_name}</div>
-                    {isNewDoc(doc.publication_date) && (
+                    {doc.is_new !== false && isNewDoc(doc.publication_date) && (
                       <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 tracking-wider">
                         NEW
                       </span>

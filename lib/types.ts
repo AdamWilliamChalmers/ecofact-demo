@@ -22,6 +22,7 @@ export interface Document {
   language_detected: string;
   requires_human_review: boolean;
   pipeline_run_date: string;
+  is_new?: boolean; // when false, suppresses NEW badge regardless of publication_date
 }
 
 export interface Source {
