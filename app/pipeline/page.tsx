@@ -11,9 +11,9 @@ import { COUNTRY_META } from "@/lib/data";
 // ---- Data ------------------------------------------------------------------
 
 const CYCLE_REPORT = {
-  run_id: "cycle-2026-03-15-0200",
-  started_at: "2026-03-15 02:00 UTC",
-  completed_at: "2026-03-15 03:47 UTC",
+  run_id: "cycle-2026-03-16-0200",
+  started_at: "2026-03-16 02:00 UTC",
+  completed_at: "2026-03-16 03:47 UTC",
   duration_mins: 107,
   status: "completed",
   new_documents: 18,
@@ -79,10 +79,10 @@ const COUNTRY_BREAKDOWN = [
 ];
 
 const SCHEDULE = [
-  { job: "Full pipeline run", frequency: "Twice weekly", next: "2025-03-14 02:00 UTC", tier: "All" },
-  { job: "Feed monitor", frequency: "Every 6 hours", next: "2025-03-10 08:00 UTC", tier: "Tier 1" },
-  { job: "Tier 1 source crawl", frequency: "Every 48 hours", next: "2025-03-12 02:00 UTC", tier: "Tier 1" },
-  { job: "Source health check", frequency: "Daily", next: "2025-03-11 02:00 UTC", tier: "All" },
+  { job: "Full pipeline run", frequency: "Twice weekly", next: "2026-03-16 02:00 UTC", tier: "All" },
+  { job: "Feed monitor", frequency: "Every 6 hours", next: "2026-03-16 08:00 UTC", tier: "Tier 1" },
+  { job: "Tier 1 source crawl", frequency: "Every 48 hours", next: "2026-03-16 02:00 UTC", tier: "Tier 1" },
+  { job: "Source health check", frequency: "Daily", next: "2026-03-16 02:00 UTC", tier: "All" },
 ];
 
 const SUCCESS_METRICS = [
@@ -211,7 +211,7 @@ export default function PipelinePage() {
             <div className="glass-card rounded-xl overflow-hidden">
               <div className="px-5 py-3 border-b border-slate-800 flex items-center justify-between">
                 <h2 className="font-display text-sm text-white">Country Breakdown</h2>
-                <span className="text-xs text-slate-500">Cycle 2026-03-15</span>
+                <span className="text-xs text-slate-500">Cycle 2026-03-16</span>
               </div>
               <table className="w-full text-sm">
                 <thead>

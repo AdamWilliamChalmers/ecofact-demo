@@ -30,7 +30,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "UK-002",
@@ -57,7 +57,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "UK-003",
@@ -83,7 +83,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "UK-004",
@@ -109,7 +109,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "UK-005",
@@ -135,7 +135,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "UK-006",
@@ -161,7 +161,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "feed",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-001",
@@ -187,7 +187,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "DE",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-002",
@@ -213,7 +213,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "DE",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-003",
@@ -240,7 +240,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "EN",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-004",
@@ -267,7 +267,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "DE",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-005",
@@ -293,7 +293,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "DE",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "DE-006",
@@ -319,7 +319,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "DE",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-001",
@@ -345,7 +345,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-002",
@@ -372,7 +372,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-003",
@@ -398,7 +398,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-004",
@@ -425,7 +425,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "feed",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-005",
@@ -451,7 +451,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
   {
     doc_id: "BR-006",
@@ -478,7 +478,7 @@ export const DEMO_DOCUMENTS: Document[] = [
     acquisition_method: "crawl",
     language_detected: "PT",
     requires_human_review: false,
-    pipeline_run_date: "2025-03-10",
+    pipeline_run_date: "2026-03-16",
   },
 ];
 

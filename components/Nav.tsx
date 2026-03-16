@@ -52,7 +52,7 @@ export default function Nav() {
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-1.5 text-xs text-slate-500">
           <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          Pipeline active · Last run 2025-03-10
+          Pipeline active · Last run 2026-03-16
         </div>
         <div className="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
           UK · Germany · Brazil
